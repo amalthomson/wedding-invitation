@@ -39,32 +39,33 @@ export default function EventDetails() {
         />
 
         {/* Main Events Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mt-16">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mt-16">
           {events.map((event, index) => (
             <motion.div 
               key={event.title}
-              className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-white/50 hover:shadow-2xl transition-shadow relative overflow-hidden group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-white/80 hover:shadow-2xl hover:bg-white transition-all duration-500 relative overflow-hidden group"
+              initial={{ opacity: 0, y: 50, rotateX: -10 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: index * 0.2, type: "spring" }}
             >
               {/* Decorative corner element */}
-              <div className="absolute -top-12 -right-12 w-32 h-32 bg-romantic-200 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute -top-16 -right-16 w-40 h-40 bg-romantic-200/50 rounded-full opacity-50 group-hover:scale-[2] group-hover:bg-romantic-300/30 transition-all duration-1000 ease-out"></div>
 
               <div className="relative z-10">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-romantic-100 text-romantic-700 text-sm font-medium mb-6">
+                <span className="inline-block px-5 py-2 rounded-full bg-romantic-100 text-romantic-800 text-sm font-semibold tracking-wide mb-6">
                   {event.date}
                 </span>
                 
-                <h3 className="text-3xl font-serif text-romantic-900 mb-6">{event.title}</h3>
+                <h3 className="text-3xl md:text-4xl font-serif text-romantic-900 mb-6">{event.title}</h3>
                 
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-4">
                     <Clock className="w-5 h-5 text-gold-dark mt-1 shrink-0" />
                     <div>
                       <strong className="block text-romantic-900 font-medium">Time</strong>
-                      <span className="text-romantic-600">{event.time}</span>
+                      <span className="text-romantic-600 text-lg">{event.time}</span>
                     </div>
                   </div>
                   
@@ -72,60 +73,68 @@ export default function EventDetails() {
                     <MapPin className="w-5 h-5 text-gold-dark mt-1 shrink-0" />
                     <div>
                       <strong className="block text-romantic-900 font-medium">Venue</strong>
-                      <span className="text-romantic-600">{event.venue}</span>
+                      <span className="text-romantic-600 text-lg">{event.venue}</span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-romantic-700 italic mb-8">{event.note}</p>
+                <p className="text-romantic-700 italic mb-8 md:text-lg">{event.note}</p>
 
-                <a 
+                <motion.a 
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   href={event.mapLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl border-2 border-romantic-200 text-romantic-800 font-medium hover:bg-romantic-50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl border-2 border-romantic-200 text-romantic-800 font-medium hover:border-gold-dark hover:text-gold-dark transition-colors"
                 >
                   <MapPin className="w-4 h-4" />
                   View on Map
-                </a>
+                </motion.a>
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* Schedule Timeline */}
-        <motion.div 
-          className="mt-24 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-serif text-romantic-900">Itinerary</h3>
-          </div>
+        <div className="mt-32 max-w-3xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-4xl font-serif text-romantic-900">Itinerary</h3>
+          </motion.div>
           
-          <div className="relative border-l border-gold-dark/30 ml-4 md:ml-0 md:border-none space-y-8 md:space-y-0">
+          <div className="relative border-l-2 border-gold-dark/20 ml-6 md:ml-0 md:border-none space-y-12 md:space-y-0">
             {schedule.map((item, i) => (
-              <div key={item.title} className="relative pl-8 md:pl-0 md:flex items-center justify-between md:mb-12">
+              <motion.div 
+                key={item.title} 
+                className="relative pl-10 md:pl-0 md:flex items-center justify-between md:mb-16"
+                initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
+              >
                 {/* Timeline Dot */}
-                <div className="absolute left-[-5px] md:left-[50%] md:translate-x-[-5px] top-1 md:top-1/2 md:-translate-y-1/2 w-2.5 h-2.5 rounded-full bg-gold-dark ring-4 ring-white"></div>
+                <div className="absolute left-[-9px] md:left-[50%] md:translate-x-[-8px] top-1 md:top-1/2 md:-translate-y-1/2 w-4 h-4 rounded-full bg-gold ring-4 ring-white shadow-md"></div>
                 
                 {/* Desktop layout lines */}
-                <div className="hidden md:block absolute left-[50%] top-0 bottom-[-3rem] w-px bg-gold-dark/30 -z-10"></div>
+                <div className="hidden md:block absolute left-[50%] top-0 -bottom-16 w-px bg-gold-dark/20 -z-10"></div>
                 
-                <div className={`md:w-[45%] ${i % 2 === 0 ? 'md:text-right md:pr-12' : 'md:order-last md:pl-12'}`}>
-                  <span className="block text-gold-dark font-medium mb-1">{item.time}</span>
-                  <h4 className="text-xl font-serif text-romantic-900 mb-1">{item.title}</h4>
-                  <p className="text-romantic-600">{item.note}</p>
+                <div className={`md:w-[45%] ${i % 2 === 0 ? 'md:text-right md:pr-16' : 'md:order-last md:pl-16'}`}>
+                  <span className="block text-gold-dark font-bold text-lg mb-2 tracking-wide uppercase">{item.time}</span>
+                  <h4 className="text-2xl font-serif text-romantic-900 mb-2">{item.title}</h4>
+                  <p className="text-romantic-600 md:text-lg">{item.note}</p>
                 </div>
                 
                 {/* Empty spacer for alternating layout */}
                 <div className="hidden md:block md:w-[45%]"></div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
