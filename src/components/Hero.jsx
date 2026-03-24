@@ -18,7 +18,7 @@ export default function Hero() {
     const end = "20260413T133000"
     const title = encodeURIComponent("Amal & Jenny Wedding")
     const location = encodeURIComponent("St Josephs Church, Seethamount")
-    const details = encodeURIComponent("Wedding ceremony")
+    const details = encodeURIComponent("Wedding Ceremony")
     const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&details=${details}&location=${location}`
     window.open(url, "_blank", "noopener")
   }
@@ -75,7 +75,7 @@ export default function Hero() {
           className="uppercase tracking-[0.4em] md:tracking-[0.6em] text-gold-light text-[0.65rem] md:text-sm font-bold mb-8 opacity-90"
           variants={itemVariants}
         >
-          Together with their families
+          Together with our families
         </motion.p>
         
         <motion.h1 
@@ -85,7 +85,9 @@ export default function Hero() {
             visible: { opacity: 1, scale: 1, filter: "blur(0px)", transition: { duration: 1.8, ease: "easeOut" } }
           }}
         >
-          Amal & Jenny
+          <span className="block">Amal</span>
+          <span className="block text-[0.5em]">&</span>
+          <span className="block">Jenny</span>
         </motion.h1>
 
         <motion.p 
@@ -111,7 +113,7 @@ export default function Hero() {
             
             <div className="text-center">
               <span className="block text-[0.65rem] md:text-sm uppercase tracking-[0.4em] text-gold-light mb-2 md:mb-4 opacity-100 font-semibold drop-shadow-md">Venue</span>
-              <strong className="font-serif text-2xl md:text-4xl font-light tracking-widest block drop-shadow-lg">St Josephs</strong>
+              <strong className="font-serif text-2xl md:text-4xl font-light tracking-widest block drop-shadow-lg">St Joseph's Church</strong>
               <p className="text-base md:text-lg text-white/80 font-serif italic mt-1 md:mt-2 drop-shadow">Seethamount</p>
             </div>
           </div>
@@ -124,23 +126,23 @@ export default function Hero() {
               className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-gold-dark to-gold text-white px-8 py-4 md:py-5 rounded-full font-semibold tracking-widest text-sm hover:shadow-[0_8px_30px_rgba(212,175,55,0.4)] transition-all focus:ring-4 focus:ring-gold-light uppercase"
             >
               <CalendarHeart className="w-5 h-5" />
-              Save Date
+              Add to Calendar
             </motion.button>
-            <motion.a 
+            {/* <motion.a 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#rsvp"
               className="w-full flex items-center justify-center gap-3 bg-white/95 text-romantic-900 px-8 py-4 md:py-5 rounded-full font-semibold tracking-widest text-sm hover:bg-white hover:text-romantic-950 transition-all shadow-[0_8px_30px_rgba(0,0,0,0.15)] uppercase"
             >
               RSVP Now
-            </motion.a>
+            </motion.a> */}
           </div>
         </motion.div>
       </motion.div>
 
       {/* Scroll Down Indicator */}
       <motion.div 
-        className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-3 text-romantic-900 drop-shadow-sm"
+        className="absolute bottom-2 md:bottom-2 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-3 text-romantic-900 drop-shadow-sm"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5, duration: 1 }}

@@ -7,7 +7,7 @@ export default function EventDetails() {
     {
       title: "Engagement Ceremony",
       date: "Monday, 06 April 2026",
-      time: "05:00 PM",
+      time: "12:00 PM",
       venue: "St Marys Church, Edamon",
       note: "We will celebrate our engagement with prayers and blessings.",
       mapLink: "https://maps.app.goo.gl/cD71kypzZEm5ygtw7?g_st=aw",
@@ -25,8 +25,8 @@ export default function EventDetails() {
   const schedule = [
     { time: "10:00 AM", title: "Guest Arrival", note: "Welcome & seating" },
     { time: "10:30 AM", title: "Wedding Ceremony", note: "Vows and blessings" },
-    { time: "11:30 AM", title: "Photo Moments", note: "Family & friends" },
-    { time: "01:30 PM", title: "Reception Lunch", note: "Celebration together" },
+    { time: "12:00 PM", title: "Photo Moments", note: "Family & friends" },
+    { time: "01:00 PM", title: "Reception Lunch", note: "Celebration together" },
   ];
 
   return (

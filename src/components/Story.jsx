@@ -6,13 +6,13 @@ const storySteps = [
   { 
     title: "First hello", 
     text: "A gentle beginning that felt like home. We met over coffee, and what was supposed to be a quick chat turned into hours of beautiful conversation. That very day, we somehow knew this was different.", 
-    date: "2017",
+    date: "2022",
     image: "/images/couple_story_1_1774252122058.png"
   },
   { 
     title: "Yes to forever", 
     text: "A promise made with prayer and joy. Under the beautiful golden sunset, the easiest question was asked, and the most wholehearted 'yes' was given.", 
-    date: "2025",
+    date: "2024",
     image: "/images/couple_story_2_1774252138586.png"
   },
   { 
