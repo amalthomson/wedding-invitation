@@ -66,38 +66,38 @@ export default function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-48 z-1 bg-gradient-to-t from-romantic-100 to-transparent" />
 
       <motion.div 
-        className="relative z-10 text-center px-4 md:px-8 max-w-5xl mx-auto mt-12 w-full flex flex-col items-center justify-center"
+        className="relative z-10 text-center px-4 md:px-8 max-w-5xl mx-auto mt-8 md:mt-10 w-full flex flex-col items-center justify-center"
         style={{ opacity }}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.p
-          className="mb-4 max-w-3xl mx-auto px-6 py-4 md:px-8 md:py-5 text-center font-serif leading-relaxed rounded-2xl border border-gold-light/25 bg-white/[0.04] backdrop-blur-sm shadow-[0_0_30px_rgba(255,215,160,0.12)]"
+          className="mb-1 max-w-3xl mx-auto px-6 py-4 md:px-8 md:py-5 text-center font-serif leading-relaxed rounded-2xl border border-gold-light/25 bg-white/[0.04] backdrop-blur-sm shadow-[0_0_30px_rgba(255,215,160,0.12)]"
           variants={itemVariants}
         >
           <span className="block text-[1.4rem] md:text-[2rem] font-script font-bold text-romantic-100/95 tracking-[0.01em] drop-shadow-[0_0_22px_rgba(255,255,255,0.2)]">
             "Love bears all things, believes all things, hopes all things, endures all things."
           </span>
-          <span className="block mt-3 text-gold-light/95 text-[0.78rem] md:text-[0.9rem] font-sans font-bold not-italic tracking-[0.08em]">
+          <span className="block mt-1 text-gold-light/95 text-[0.78rem] md:text-[0.9rem] font-sans font-bold not-italic tracking-[0.08em]">
             1 Corinthians 13:7
           </span>
         </motion.p>
 
         <motion.div
-          className="h-px w-40 md:w-56 bg-gradient-to-r from-transparent via-gold-light/80 to-transparent mb-6"
+          className="h-px w-40 md:w-56 bg-gradient-to-r from-transparent via-gold-light/80 to-transparent mb-3"
           variants={itemVariants}
         />
 
         <motion.p 
-          className="uppercase tracking-[0.4em] md:tracking-[0.6em] text-gold-light text-[0.65rem] md:text-sm font-bold mb-8 opacity-90"
+          className="uppercase text-gold-light drop-shadow-[0_0_20px_rgba(249,229,163,0.28)] text-base sm:text-lg md:text-2xl font-serif font-bold max-w-3xl mx-auto mb-6 px-4 tracking-wide"
           variants={itemVariants}
         >
           Together with our families
         </motion.p>
         
         <motion.h1 
-          className="font-script text-[5rem] sm:text-8xl md:text-9xl lg:text-[12rem] text-white drop-shadow-[0_0_40px_rgba(255,255,255,0.15)] mb-6 leading-none pb-2"
+          className="font-script text-[5rem] sm:text-8xl md:text-9xl lg:text-[12rem] text-white drop-shadow-[0_0_40px_rgba(255,255,255,0.15)] mb-4 leading-none pb-1"
           variants={{
             hidden: { opacity: 0, scale: 0.95, filter: "blur(10px)" },
             visible: { opacity: 1, scale: 1, filter: "blur(0px)", transition: { duration: 1.8, ease: "easeOut" } }
@@ -109,17 +109,17 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p 
-          className="text-white/80 drop-shadow-md text-base sm:text-lg md:text-2xl font-serif italic max-w-2xl mx-auto mb-16 px-4"
+          className="uppercase text-gold-light drop-shadow-[0_0_20px_rgba(249,229,163,0.28)] text-base sm:text-lg md:text-2xl font-serif font-bold max-w-3xl mx-auto mb-6 px-4 tracking-wide"
           variants={itemVariants}
         >
           Invite you to celebrate a day filled with love, faith, and everlasting promises.
         </motion.p>
 
         <motion.div
-          className="inline-block w-full max-w-4xl mt-2 md:mt-4 px-2 md:px-0"
+          className="inline-block w-full max-w-4xl mt-1 md:mt-2 px-2 md:px-0"
           variants={itemVariants}
         >
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-24 text-white border-y border-white/10 py-8 md:py-10 mb-8 md:mb-12 drop-shadow-xl mx-auto w-fit px-8 md:px-24 bg-black/20 backdrop-blur-md rounded-3xl md:rounded-[2.5rem]">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-24 text-white border-y border-white/10 py-8 md:py-10 mb-6 md:mb-8 drop-shadow-xl mx-auto w-fit px-8 md:px-24 bg-black/20 backdrop-blur-md rounded-3xl md:rounded-[2.5rem]">
             <div className="text-center">
               <span className="block text-[0.65rem] md:text-sm uppercase tracking-[0.4em] text-gold-light mb-2 md:mb-4 opacity-100 font-semibold drop-shadow-md">Date</span>
               <strong className="font-serif text-2xl md:text-4xl font-light tracking-widest block drop-shadow-lg">13 April</strong>
@@ -136,7 +136,7 @@ export default function Hero() {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center w-full max-w-lg mx-auto pb-4 md:pb-16 relative z-10">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center w-full max-w-lg mx-auto pb-2 md:pb-8 relative z-10">
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -159,7 +159,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Scroll Down Indicator */}
-      <motion.div 
+      {/* <motion.div 
         className="absolute bottom-2 md:bottom-2 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-3 text-romantic-900 drop-shadow-sm"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -172,7 +172,7 @@ export default function Hero() {
         >
           <ChevronDown className="w-5 h-5 opacity-70" />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Floating particles effect container (CSS overlay) */}
       <div className="absolute inset-0 pointer-events-none z-0 mix-blend-screen opacity-50">
