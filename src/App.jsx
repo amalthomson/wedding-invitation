@@ -14,7 +14,7 @@ function App() {
       <Gallery />
       <EventDetails />
       <Countdown />
-      <RSVP />
+      {/* <RSVP /> */}
       <Footer />
     </main>
   )

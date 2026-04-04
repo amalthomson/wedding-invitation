@@ -21,7 +21,7 @@ export default function RSVP() {
         <SectionTitle 
           eyebrow="RSVP"
           title="Will You Be Joining Us?"
-          subtitle="Kindly let us know by March 15th, 2026."
+          subtitle="Kindly let us know by April 5, 2026."
         />
 
         <div className="mt-16 flex flex-col lg:flex-row gap-12 items-start justify-center">
@@ -78,7 +78,13 @@ export default function RSVP() {
                       <option>1 (Just me)</option>
                       <option>2 Guests</option>
                       <option>3 Guests</option>
-                      <option>4+ Guests</option>
+                      <option>4 Guests</option>
+                      <option>5 Guests</option>
+                      <option>6 Guests</option>
+                      <option>7 Guests</option>
+                      <option>8 Guests</option>
+                      <option>9 Guests</option>
+                      <option>10 Guests</option>
                     </select>
                   </div>
                 </div>
@@ -101,7 +107,7 @@ export default function RSVP() {
                   </div>
                 </div>
 
-                <div>
+                {/* <div>
                   <label htmlFor="message" className="block text-sm font-medium text-romantic-900 mb-2">Message for the couple (Optional)</label>
                   <textarea 
                     id="message" 
@@ -109,7 +115,7 @@ export default function RSVP() {
                     placeholder="Looking forward to it! / Sending love from..."
                     className="w-full px-5 py-4 bg-white/50 border border-romantic-200 rounded-xl focus:ring-2 focus:ring-gold-dark focus:border-transparent outline-none transition-all resize-none placeholder:text-romantic-300"
                   ></textarea>
-                </div>
+                </div> */}
 
                 <div className="pt-4">
                   <button 
@@ -144,25 +150,25 @@ export default function RSVP() {
               
               <h3 className="text-2xl font-serif mb-6 text-gold-light">Need Assistance?</h3>
               <p className="mb-8 text-romantic-100 leading-relaxed">
-                Reach out to us anytime for travel guidance, accommodation suggestions, or special dietary requirements.
+                Reach out to us anytime for questions, suggestions, or special dietary requirements.
               </p>
               
               <div className="space-y-6">
                 <div className="border-b border-romantic-600 pb-4">
                   <span className="block text-sm uppercase tracking-widest text-romantic-300 mb-1">Bride's Family</span>
-                  <strong className="text-lg font-medium tracking-wide">+91 9XX XX6 3XX</strong>
+                  <strong className="text-lg font-medium tracking-wide">+91 9469 664 422</strong>
                 </div>
                 <div>
                   <span className="block text-sm uppercase tracking-widest text-romantic-300 mb-1">Groom's Family</span>
-                  <strong className="text-lg font-medium tracking-wide">+91 9XX XX4 8XX</strong>
+                  <strong className="text-lg font-medium tracking-wide">+91 7306 741 729</strong>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-romantic-100 text-center">
+            {/* <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-romantic-100 text-center">
               <h4 className="font-serif text-xl text-romantic-900 mb-2">Gift Registry</h4>
               <p className="text-romantic-600 mb-6 text-sm">Your presence is our present. However, if you wish to honor us with a gift, a wishing well will be available at the reception.</p>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>

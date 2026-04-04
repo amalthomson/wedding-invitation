@@ -105,6 +105,7 @@ export default function EventDetails() {
             viewport={{ once: true }}
           >
             <h3 className="text-4xl font-serif text-romantic-900">Itinerary</h3>
+            <p className="text-romantic-600 md:text-lg">13 April 2026</p>
           </motion.div>
           
           <div className="relative border-l-2 border-gold-dark/20 ml-6 md:ml-0 md:border-none space-y-12 md:space-y-0">

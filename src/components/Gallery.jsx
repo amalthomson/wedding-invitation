@@ -3,16 +3,28 @@ import SectionTitle from "./ui/SectionTitle"
 
 const galleryImages = [
   {
-    src: "/images/gallery_wedding_1_1774252170906.png",
-    alt: "Couple walking in garden",
+    src: "/images/aj_one.jpeg",
+    alt: "",
   },
   {
-    src: "/images/gallery_wedding_2_1774252189008.png",
-    alt: "Wedding details and flowers",
+    src: "/images/aj_two.jpeg",
+    alt: "",
   },
   {
-    src: "/images/gallery_wedding_3_1774252207539.png",
-    alt: "Couple laughing under fairy lights",
+    src: "/images/aj_three.jpeg",
+    alt: "",
+  },
+  {
+    src: "/images/aj_four.jpeg",
+    alt: "",
+  },
+  {
+    src: "/images/aj_five.jpeg",
+    alt: "",
+  },
+  {
+    src: "/images/aj_six.jpeg",
+    alt: "",
   }
 ];
 

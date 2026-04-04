@@ -52,7 +52,8 @@ export default function Hero() {
     >
       {/* Background Image Wrapper for perfect Parallax without tearing */}
       <motion.div 
-        className="absolute -top-[15%] -bottom-[15%] -left-[5%] -right-[5%] w-[110%] h-[130%] bg-cover bg-center"
+        // className="absolute -top-[15%] -bottom-[15%] -left-[5%] -right-[5%] w-[110%] h-[130%] bg-cover bg-center"
+        className="absolute -top-[15%] -bottom-[15%] -left-[5%] -right-[5%] w-[100%] h-[100%] bg-cover bg-center"
         style={{ 
           backgroundImage: "url('/images/hero_bg_moody_floral.png')",
           y: yBg
@@ -71,6 +72,23 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
+        <motion.p
+          className="mb-4 max-w-3xl mx-auto px-6 py-4 md:px-8 md:py-5 text-center font-serif leading-relaxed rounded-2xl border border-gold-light/25 bg-white/[0.04] backdrop-blur-sm shadow-[0_0_30px_rgba(255,215,160,0.12)]"
+          variants={itemVariants}
+        >
+          <span className="block text-[1.4rem] md:text-[2rem] font-script font-bold text-romantic-100/95 tracking-[0.01em] drop-shadow-[0_0_22px_rgba(255,255,255,0.2)]">
+            "Love bears all things, believes all things, hopes all things, endures all things."
+          </span>
+          <span className="block mt-3 text-gold-light/95 text-[0.78rem] md:text-[0.9rem] font-sans font-bold not-italic tracking-[0.08em]">
+            1 Corinthians 13:7
+          </span>
+        </motion.p>
+
+        <motion.div
+          className="h-px w-40 md:w-56 bg-gradient-to-r from-transparent via-gold-light/80 to-transparent mb-6"
+          variants={itemVariants}
+        />
+
         <motion.p 
           className="uppercase tracking-[0.4em] md:tracking-[0.6em] text-gold-light text-[0.65rem] md:text-sm font-bold mb-8 opacity-90"
           variants={itemVariants}

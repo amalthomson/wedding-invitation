@@ -5,21 +5,21 @@ import SectionTitle from "./ui/SectionTitle"
 const storySteps = [
   { 
     title: "First hello", 
-    text: "A gentle beginning that felt like home. We met over coffee, and what was supposed to be a quick chat turned into hours of beautiful conversation. That very day, we somehow knew this was different.", 
+    text: "It all began on the first day of college, during the induction program. What seemed like just another introduction soon unfolded into hours of laughter and conversation. Somewhere between those moments, we quietly knew that this was something special.", 
     date: "2022",
-    image: "/images/couple_story_1_1774252122058.png"
+    image: "/images/story_one.jpeg"
   },
   { 
     title: "Yes to forever", 
-    text: "A promise made with prayer and joy. Under the beautiful golden sunset, the easiest question was asked, and the most wholehearted 'yes' was given.", 
+    text: "A promise made with prayer and joy. In a quiet golden moment, the easiest question was asked, and the most wholehearted 'yes' was given.", 
     date: "2024",
-    image: "/images/couple_story_2_1774252138586.png"
+    image: "/images/story_two.jpeg"
   },
   { 
     title: "Together always", 
     text: "Two families, one beautiful story. As our lives intertwine, we look forward to the promise of tomorrow, hand in hand, building a life founded on love and trust.", 
     date: "2026",
-    image: "/images/couple_story_3_1774252156196.png"
+    image: "/images/story_three.jpeg"
   },
 ];
 
