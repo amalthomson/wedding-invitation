@@ -10,7 +10,7 @@ function App() {
   return (
     <main className="w-full min-h-screen font-sans text-romantic-800 selection:bg-gold-light/40 selection:text-romantic-900">
       <Hero />
-      <Story />
+      {/* <Story /> */}
       <Gallery />
       <EventDetails />
       <Countdown />
