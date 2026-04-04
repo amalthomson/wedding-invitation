@@ -5,7 +5,7 @@ import SectionTitle from "./ui/SectionTitle"
 const storySteps = [
   { 
     title: "First hello", 
-    text: "It all began on the first day of college, during the induction program. What seemed like just another introduction soon unfolded into hours of laughter and conversation. Somewhere between those moments, we quietly knew that this was something special.", 
+    text: "When we first crossed paths, it felt like just another meeting, but it turned into hours of laughter and talking. Somewhere in there, we realized this was something special.", 
     date: "2022",
     image: "/images/story_one.jpeg"
   },

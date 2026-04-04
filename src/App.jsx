@@ -3,18 +3,16 @@ import Story from "./components/Story"
 import Gallery from "./components/Gallery"
 import EventDetails from "./components/EventDetails"
 import Countdown from "./components/Countdown"
-import RSVP from "./components/RSVP"
 import Footer from "./components/Footer"
 
 function App() {
   return (
     <main className="w-full min-h-screen font-sans text-romantic-800 selection:bg-gold-light/40 selection:text-romantic-900">
       <Hero />
-      {/* <Story /> */}
+      <Story />
       <Gallery />
       <EventDetails />
       <Countdown />
-      {/* <RSVP /> */}
       <Footer />
     </main>
   )
